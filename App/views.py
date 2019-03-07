@@ -25,9 +25,7 @@ def register(request):
 				return HttpResponseRedirect('/')
 		else:
 			form1 = forms.UserSignUpForm()
-		return render(request,'App/register.html',context={
-			'form':form1
-			})
+			return render(request,'App/register.html',context={'form':form1})
 	else:
 		messages.error(request, 'You Are logged In')
 		return redirect('/')
